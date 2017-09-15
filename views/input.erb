@@ -1,0 +1,14 @@
+<% @word.each do |word| %>
+  <h4><a href="/output/<%= word.word %>"><%= word.word %></a></h4>
+<% end %>
+
+
+<h2>Word Definer</h2>
+
+<form action="/output" method="post">
+  <div class="form-group">
+    <label for="word">Enter a word</label>
+    <input id="word" name="word" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn btn-info">Add to my dictionary!</button>
+</form>
