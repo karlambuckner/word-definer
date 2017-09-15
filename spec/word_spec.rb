@@ -48,7 +48,7 @@ require('definition')
         test_word.save
         test_word=Word.new({:word=>"book"})
         test_word.save
-        expect(Word.find(test_word.id)).to(eq(test_word))
+        expect(Word.find(test_word.word)).to(eq(test_word))
       end
     end
 

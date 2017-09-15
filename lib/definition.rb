@@ -15,6 +15,6 @@ class Definition
   end
 
   def self.clear
-    @@Definition = []
+    @@definition = []
   end
 end

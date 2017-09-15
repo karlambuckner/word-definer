@@ -26,7 +26,7 @@ class Word
 
   def self.find(identify)
     @@words.each do |word|
-      if word.id == identify
+      if word.word == identify
         return word
       end
     end
