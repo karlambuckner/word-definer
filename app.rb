@@ -15,6 +15,12 @@ get('/output/:word') do
   erb(:output)
 end
 
+post('/output/:word') do
+  @word = Word.find(params[:word])
+  @word.add_def({:definition=>params["definition"]})
+  erb(:output)
+end
+
 post('/output') do
   item = Word.new({:word=>params["word"]})
   item.save()

@@ -1,1 +1,13 @@
 <h3><%= @word.word%></h3>
+
+<% @word.definition.each do |definition| %>
+  <p><%= definition[:definition] %></p>
+<% end %>
+
+<form action="/output/<%= @word.word %>" method="post">
+  <div class="form-group">
+    <label for="defintion">Now define your word:</label>
+    <input id="def" name="definition" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn btn-info">Define!</button>
+</form>

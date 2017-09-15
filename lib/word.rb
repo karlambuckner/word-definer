@@ -1,6 +1,6 @@
 class Word
   @@words = []
-  attr_reader(:word, :definition, :id)
+  attr_accessor(:word, :definition, :id)
 
   def initialize(attributes)
     @word = attributes.fetch(:word)
@@ -20,13 +20,13 @@ class Word
     @@words = []
   end
 
-  def add_def
+  def add_def(definition)
     @definition.push(definition)
   end
 
   def self.find(identify)
     @@words.each do |word|
-      if word.word == identify
+      if word.id == identify
         return word
       end
     end
