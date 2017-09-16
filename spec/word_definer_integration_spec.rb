@@ -16,7 +16,7 @@ describe('link word redirect', {:type => :feature}) do
   it("navigates to a new page displaying that word with define form") do
     visit('/output')
     visit('/output/bunny')
-    fill_in('definition', :with => 'floppy animal that hops')
+    fill_in('definition', :with => 'small floppy animal that hops')
     click_button('Define!')
     expect(page).to have_content('bunny', 'floppy animal that hops')
   end

@@ -1,8 +1,27 @@
 body {
   background-color: silver;
+  font-family: 'Schoolbell', cursive;
 }
 
 img {
   display: block;
   margin: auto;
+  float: right;
+  padding: 10px;
+}
+
+body {
+  font-family: 'Schoolbell', cursive;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+ul {
+  font-size: 22px;
+}
+
+h2 {
+  color: limegreen;
 }

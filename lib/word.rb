@@ -3,7 +3,7 @@ class Word
   attr_accessor(:word, :definitions, :id)
 
   def initialize(attributes)
-    @word = attributes.fetch(:word)
+    @word= attributes.fetch(:word)
     @id = @@words.length + 1
     @definitions = []
   end
@@ -16,10 +16,6 @@ class Word
     @@words.push(self)
   end
 
-  def self.clear()
-    @@words = []
-  end
-
   def add_def(definition)
     @definitions.push(definition)
   end
@@ -30,5 +26,9 @@ class Word
         return word
       end
     end
+  end
+
+  def self.clear()
+        @@words = []
   end
 end

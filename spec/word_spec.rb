@@ -43,11 +43,9 @@ require('word')
 
     describe(".find") do
       it("finds a word by the id of that word") do
-        test_word = Word.new({:word=>"bunny"})
-        test_word.save
-        test_word=Word.new({:word=>"book"})
-        test_word.save
-        expect(Word.find(test_word.word)).to(eq(test_word))
+        test_word1 = Word.new({:word=>"bunny"})
+        test_word1.save
+        expect(Word.find(test_word1.word)).to(eq(test_word1))
       end
     end
   end
